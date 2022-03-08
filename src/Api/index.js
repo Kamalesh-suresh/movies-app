@@ -1,5 +1,9 @@
 import axios from 'axios';
 
-const url='https://api.themoviedb.org/3/movie/550?api_key=a0ca8990b314619303c44821b7d192aa';
+const API = axios.create({ baseURL: 'https://data-imdb1.p.rapidapi.com/titles/search/title/game',params: {info: 'mini_info', limit: '10', page: '1', titleType: 'movie'},
+    headers: {
+        'x-rapidapi-host': 'data-imdb1.p.rapidapi.com',
+        'x-rapidapi-key': 'd406845fc3msh165a2aa77fd4a7dp1c0805jsna42360d10b2e'
+    } });
 
-export const fetchMovies= ()=>axios.get(url);
+export const fetchMovies= ()=>API.get();

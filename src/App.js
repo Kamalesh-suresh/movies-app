@@ -1,11 +1,12 @@
-import HomePage from './containers/Homepage/HomePage';
+import AppRoutes from './routes/AppRoutes';
+
 
 
 
 function App() {
     return (
         <div>
-            <HomePage/>
+            <AppRoutes/>
         </div>
     );
 }
