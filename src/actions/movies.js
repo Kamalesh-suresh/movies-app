@@ -9,3 +9,8 @@ export const getMovies=()=>async(dispatch)=>{
         console.log(error.message);
     }
 };
+
+export const addFavorites=(movie)=>(dispatch)=>{
+    const {data}=movie;
+    dispatch({type:'ADD_FAVORITE',payload:data});
+};

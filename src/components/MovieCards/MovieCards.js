@@ -5,14 +5,16 @@ import MovieCard from '../MovieCard/MovieCard';
 
 
 export default function MovieCards(){
-    const movies =useSelector((state)=>state.movies);
+    const {results} =useSelector((state)=>state?.movies.movies);
+    console.log(results);
+    const fav =useSelector((state)=>state);
     const classes=useStyles();
 
-    console.log(movies);
+    console.log(fav);
     return(
-        !movies.length?<Grid className={classes.progress}><CircularProgress/></Grid>:(
+        !results?.length?<Grid className={classes.progress}><CircularProgress/></Grid>:(
             <Grid className={classes.container} container spacing={2} direction="row" alignItems="center" justifyContent="center">
-                {movies.map((movie)=>(<Grid key={movie.id} item xs={12} sm={6} md={2}>
+                {results?.map((movie)=>(<Grid key={movie.id} item xs={12} sm={6} md={2}>
                     <MovieCard  movie={movie}/>
                 </Grid>))}
             </Grid>
