@@ -15,7 +15,7 @@ const MockRouter=()=>{
 // eslint-disable-next-line no-undef
 describe('Navbar',()=>{
     // eslint-disable-next-line no-undef
-    test('renders movie logo',async ()=>{
+    test('renders movie logo', ()=>{
         render(
             <MockRouter/>
         );
@@ -26,7 +26,7 @@ describe('Navbar',()=>{
     });
     
     // eslint-disable-next-line no-undef
-    it('renders button',async ()=>{
+    it('renders button', ()=>{
         render(
             <MockRouter/>
         );
