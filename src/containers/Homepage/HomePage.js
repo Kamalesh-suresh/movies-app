@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
 
+
 import NavBar from '../../components/Navbar/NavBar';
 import MovieCards from '../../components/MovieCards/MovieCards';
 import { getMovies } from '../../actions/movies';
