@@ -25,9 +25,9 @@ export default function NavBar(){
                     </Typography>
                     <Stack spacing={2} direction="row" className="buttonContainer">
                   
-                        <Button data-testid="button" variant="contained" color="error" className={classes.buttonText} onClick={()=>navigate('/')}>Home</Button>
-                        <Button variant="contained" color="error"  className={classes.buttonText} onClick={()=>navigate('/favorites')}>Favorites</Button>
-                        <Button variant="contained" color="error"  className={classes.buttonText} onClick={()=>navigate('/contact')}>Contact</Button>
+                        <Button data-testid="homeButton" variant="contained" color="error" className={classes.buttonText} onClick={()=>navigate('/')}>Home</Button>
+                        <Button  data-testid="favoritesButton"variant="contained" color="error"  className={classes.buttonText} onClick={()=>navigate('/favorites')}>Favorites</Button>
+                        <Button data-testid="contactButton" variant="contained" color="error"  className={classes.buttonText} onClick={()=>navigate('/contact')}>Contact</Button>
                     
                     </Stack>
                 </Toolbar>

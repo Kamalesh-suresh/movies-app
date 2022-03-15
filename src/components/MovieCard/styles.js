@@ -8,14 +8,34 @@ export default makeStyles(()=>({
     },
     cardFont:{
         fontSize:'1.2em',
-        padding:'0em !important'
+        padding:'0em !important',
+        fontFamily: 'Poppins',
     },
     cardText:{
         padding:'0em !important',
         marginTop:'1em',
-        marginLeft:'15px'
+        marginLeft:'15px',
+        fontFamily: 'Poppins',
     },
     MuiCardContent:{
         padding:'0em'
+    },
+    favText:{
+        fontSize:'0.9em',
+        padding:'0 0 0 0',
+        margin:'0 0 0 0',
+        color:'#E98195',
+        fontFamily: 'Poppins',
+        
+    },
+    favText2:{
+        fontFamily: 'Poppins',
+        
+    },
+    buttonContainer:{
+        display:'flex',
+        alignItems:'center',
+        height:'2em',
+        fontWeight:'400'
     }
 }));
