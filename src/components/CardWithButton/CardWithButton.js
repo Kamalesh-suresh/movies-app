@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
 
 
-const CardWithoutButton=({movie})=>{
+const CardWithButton=({movie})=>{
     const classes =useStyles();
     const dispatch=useDispatch();
     return(
@@ -34,4 +34,4 @@ const CardWithoutButton=({movie})=>{
     );
 };
 
-export default CardWithoutButton;
+export default CardWithButton;

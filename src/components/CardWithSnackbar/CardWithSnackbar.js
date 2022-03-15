@@ -10,7 +10,7 @@ import Snackbar from '@mui/material/Snackbar';
 import React from 'react';
 // import { addFavorites } from '../../actions/movies';
 
-const MovieCard = (props) => {
+const CardWithSnackbar = (props) => {
     const [open, setOpen] = React.useState(false);
     const classes=useStyles();
     const dispatch=useDispatch();
@@ -60,4 +60,4 @@ const MovieCard = (props) => {
         </> );
 };
  
-export default MovieCard;
+export default CardWithSnackbar;

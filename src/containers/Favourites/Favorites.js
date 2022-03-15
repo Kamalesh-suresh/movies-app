@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import useStyles from './style';
 
 import {Grid} from '@material-ui/core';
-import CardWithoutButton from '../../components/CardWithoutButton/CardWithoutButton';
+import CardWithButton from '../../components/CardWithButton/CardWithButton';
 
 const Favorites = () => {
     const classes=useStyles();
@@ -23,7 +23,7 @@ const Favorites = () => {
             {!fav?.length? <div className={classes.favContainer}><span className={classes.noFavText}>No Favorites! please add </span></div>:(
                 <Grid className={classes.container} container spacing={2} direction="row" alignItems="center" justifyContent="center">
                     {fav?.map((movie)=>(<Grid key={movie.id} item xs={12} sm={6} md={2}>
-                        <CardWithoutButton movie={movie} />
+                        <CardWithButton movie={movie} />
 
 
                     </Grid>))}
