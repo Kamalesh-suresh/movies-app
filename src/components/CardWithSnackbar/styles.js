@@ -26,10 +26,12 @@ export default makeStyles(()=>({
         margin:'0 0 0 0',
         color:'#E98195',
         fontFamily: 'Poppins',
+        textTransform:'uppercase'
         
     },
     favText2:{
         fontFamily: 'Poppins',
+        textTransform:'uppercase'
         
     },
     buttonContainer:{

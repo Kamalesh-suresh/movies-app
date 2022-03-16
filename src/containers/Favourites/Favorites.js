@@ -7,14 +7,21 @@ import { useSelector } from 'react-redux';
 // // import Button from '@mui/material/Button';
 // import Typography from '@mui/material/Typography';
 import useStyles from './style';
-
 import {Grid} from '@material-ui/core';
-import CardWithButton from '../../components/CardWithButton/CardWithButton';
+// import CardWithButton from '../../components/CardWithButton/CardWithButton';
+import SimpleCard from '../../components/SimpleCard/SimpleCard';
+
 
 const Favorites = () => {
     const classes=useStyles();
+    
+    
+
+
     const fav =useSelector((state)=>state?.movies.favorites);
     console.log(fav);
+
+    
     return ( 
         <>
             <NavBar/>      
@@ -23,9 +30,8 @@ const Favorites = () => {
             {!fav?.length? <div className={classes.favContainer}><span className={classes.noFavText}>No Favorites! please add </span></div>:(
                 <Grid className={classes.container} container spacing={2} direction="row" alignItems="center" justifyContent="center">
                     {fav?.map((movie)=>(<Grid key={movie.id} item xs={12} sm={6} md={2}>
-                        <CardWithButton movie={movie} />
-
-
+                        <SimpleCard movie={movie}  title="Remove Favorites" type='REMOVE_FAVORITE'/>
+                      
                     </Grid>))}
                 </Grid>)}
             

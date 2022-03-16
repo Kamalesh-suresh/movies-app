@@ -1,4 +1,4 @@
-/* eslint-disable */ 
+/* eslint-disable */
 
 
 import {render,screen,fireEvent} from '@testing-library/react';
@@ -29,27 +29,27 @@ const MockRouter=()=>{
 //   }
 // }
 
-// eslint-disable-next-line no-undef
+
 describe('Navbar',()=>{
-    // eslint-disable-next-line no-undef
+    
     test('renders movie logo', ()=>{
         render(
             <MockRouter/>
         );
         const linkElement=screen.getByText('Movies');
-        // eslint-disable-next-line no-undef
+        
         expect(linkElement).toBeInTheDocument();
     
     });
     
-    // eslint-disable-next-line no-undef
+
     it('renders home button', ()=>{
         render(
             <MockRouter/>
         );
         const buttonElements=screen.getAllByTestId('homeButton');
-        // eslint-disable-next-line no-undef
-        expect(buttonElements.length).toBe(1);
+        
+        expect(buttonElements).toHaveLength(1);
     
     });
 
@@ -58,7 +58,7 @@ describe('Navbar',()=>{
             <MockRouter/>
         );
         const buttonElement=screen.getByTestId('homeButton');
-        // eslint-disable-next-line no-undef
+       
         expect(buttonElement).toHaveTextContent('Home');
     
     });
@@ -68,7 +68,7 @@ describe('Navbar',()=>{
             <MockRouter/>
         );
         const buttonElement=screen.getByTestId('homeButton');
-        // eslint-disable-next-line no-undef
+      
         const linkElement=screen.getByText('Movies');
         fireEvent.click(buttonElement);
         expect(linkElement).toBeInTheDocument();
@@ -96,6 +96,6 @@ describe('Navbar',()=>{
 
     
 });
-// eslint-disable-next-line no-undef
+
 
 

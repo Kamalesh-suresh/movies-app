@@ -3,14 +3,25 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import useStyles from './styles';
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
+import SimpleButton from '../SimpleButton/SimpleButton';
+import React from 'react';
 
 
-const CardWithButton=({movie})=>{
-    const classes =useStyles();
+
+
+const SimpleCard=({movie,title,type})=>{
+    
+    const classes= useStyles();
     const dispatch=useDispatch();
+    
+   
+
+    const fn=()=>{
+        dispatch({type:type,payload:movie.id});
+      
+    };
+
     return(
         <>
             <Card  className={classes.movieCard} data-testid="card">
@@ -24,14 +35,13 @@ const CardWithButton=({movie})=>{
                     <Typography gutterBottom className={classes.cardFont} data-testid="cardText"component="div">
                         {movie?.titleText.text}
                     </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button size="small" color="error" onClick={()=>dispatch({type:'REMOVE_FAVORITE',payload:movie.id})}>Remove favorite</Button>
-                </CardActions>
-                           
+                </CardContent>  
+                <SimpleButton func={fn} title={title} />
+                       
             </Card>
         </> 
     );
 };
 
-export default CardWithButton;
+
+export default SimpleCard;

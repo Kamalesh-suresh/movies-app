@@ -6,22 +6,17 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import useStyles from './styles';
 import { useDispatch } from 'react-redux';
-import Snackbar from '@mui/material/Snackbar';
 import React from 'react';
-// import { addFavorites } from '../../actions/movies';
+import Snackbr from '../Snackbr/Snackbr';
+
 
 const CardWithSnackbar = (props) => {
     const [open, setOpen] = React.useState(false);
     const classes=useStyles();
     const dispatch=useDispatch();
-    const {movie,fav}=props;
+    const {movie,fav,type,message,title}=props;
 
-    // console.log(movie);
-    
-    // const addFavoritesHandler=(movie)=>{
-    //     dispatch(addFavorites(movie));
-    //     console.log(movie);
-    // };
+ 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
             return;
@@ -29,6 +24,8 @@ const CardWithSnackbar = (props) => {
 
         setOpen(false);
     };
+
+    
 
     return ( 
         <>
@@ -46,16 +43,12 @@ const CardWithSnackbar = (props) => {
                 </CardContent>
                 <CardActions className={classes.buttonContainer}>
                     
-                    {fav.map(i=>i.id).indexOf(movie.id)<0? <Button size="small" color="error" className={classes.favText2} onClick={()=>{dispatch({type:'ADD_FAVORITE',payload:movie});
-                        setOpen(true);console.log(open);}}>Add to favorites</Button>:<span className={classes.favText}>ADDED TO FAVORITES</span>}
+                    {fav.map(i=>i.id).indexOf(movie.id)<0? <Button size="small" color="error" className={classes.favText2} onClick={()=>{dispatch({type:type,payload:movie});
+                        setOpen(true);console.log(open);}}>Add to {title}</Button>:<span className={classes.favText}>ADDED TO {title}</span>}
+                    
                 </CardActions>
-                <Snackbar
-                    open={open}
-                    autoHideDuration={3000}
-                    onClose={handleClose}
-                    message="Added to favorites"
                 
-                />
+                <Snackbr open={open} close={handleClose} message={message}/>
             </Card>
         </> );
 };
