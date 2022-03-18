@@ -16,7 +16,7 @@ const Contact = () => {
                         <span><span className={classes.corporateText}>E mail :</span>psiog@outlook.com</span>
                     </Grid>
                     <Grid item xs={12} sm={6} className={classes.videoContainer}>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/azxZmlNh6-A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe data-testid="psiogVideo" width="560" height="315" src="https://www.youtube.com/embed/azxZmlNh6-A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </Grid>
                 </Grid>
                 

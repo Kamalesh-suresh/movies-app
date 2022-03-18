@@ -75,24 +75,7 @@ describe('Navbar',()=>{
     
     });
 
-    // it('click favorites button', async ()=>{
-    //     render(
-    //         <MockRouter/>
-    //     );
-    //     const buttonElement=screen.getByTestId('favoritesButton');
-    //     // eslint-disable-next-line no-undef
-        
-    //      fireEvent.click(buttonElement);
-    //      const linkElement= await screen.findByTestId('fav-heading');
-    //      expect(linkElement).toBeInTheDocument()
     
-    // });
-
-    // it('should navigate to the about page',  ()=> {
-    //     const { container, getByTestId } = renderWithRouter(<NavBar />) 
-    //     fireEvent.click(getByTestId('favoritesButton'))
-    //     expect(screen.innerHTML).toMatch('This is Favorites Pages')
-    //   })
 
     
 });

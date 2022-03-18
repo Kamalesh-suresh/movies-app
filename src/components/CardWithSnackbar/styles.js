@@ -7,7 +7,7 @@ export default makeStyles(()=>({
        
     },
     cardFont:{
-        fontSize:'1.2em',
+        fontSize:'1em',
         padding:'0em !important',
         fontFamily: 'Poppins',
     },

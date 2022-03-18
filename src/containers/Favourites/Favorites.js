@@ -18,7 +18,7 @@ const Favorites = () => {
     
 
 
-    const fav =useSelector((state)=>state?.movies.favorites);
+    const fav =useSelector((state)=>state?.movies?.favorites);
     console.log(fav);
 
     
@@ -30,7 +30,7 @@ const Favorites = () => {
             {!fav?.length? <div className={classes.favContainer}><span className={classes.noFavText}>No Favorites! please add </span></div>:(
                 <Grid className={classes.container} container spacing={2} direction="row" alignItems="center" justifyContent="center">
                     {fav?.map((movie)=>(<Grid key={movie.id} item xs={12} sm={6} md={2}>
-                        <SimpleCard movie={movie}  title="Remove Favorites" type='REMOVE_FAVORITE'/>
+                        <SimpleCard data-testid='moviecard' movie={movie}  title="Remove Favorites" type='REMOVE_FAVORITE'/>
                       
                     </Grid>))}
                 </Grid>)}

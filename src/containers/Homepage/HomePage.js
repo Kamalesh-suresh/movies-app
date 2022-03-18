@@ -13,9 +13,9 @@ import { useSelector } from 'react-redux';
 export default function HomePage(){
     const dispatch=useDispatch();
 
-    const {results} =useSelector((state)=>state?.movies.movies);
+    const {results} =useSelector((state)=>state?.movies?.movies);
     
-    const fav =useSelector((state)=>state?.movies.favorites);
+    const fav =useSelector((state)=>state?.movies?.favorites);
 
 
     console.log(results);
