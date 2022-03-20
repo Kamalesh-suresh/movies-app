@@ -2,12 +2,12 @@ import {makeStyles} from '@material-ui/core/styles';
 
 export default makeStyles(()=>({
     movieCard:{
-        width:'100%',
+        width:'95%',
         marginTop:'1em',
-       
+        flex:'1 1 24%',
     },
     cardFont:{
-        fontSize:'1.0em',
+        fontSize:'0.7em',
         padding:'0em !important'
     },
     cardText:{

@@ -18,8 +18,8 @@ export default function HomePage(){
     const fav =useSelector((state)=>state?.movies?.favorites);
 
 
-    console.log(results);
-    console.log(fav);
+    // console.log(results);
+    // console.log(fav);
 
     useEffect(()=>{
         dispatch(getMovies());

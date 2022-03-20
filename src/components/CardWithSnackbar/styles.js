@@ -1,13 +1,29 @@
 import {makeStyles} from '@material-ui/core/styles';
 
 export default makeStyles(()=>({
+
+    root: {
+     
+        // marginLeft: "3.5em",
+        // marginTop: "4em",
+        // height: "24em",
+        // boxShadow: "2px 2px 5px 0px rgba(0,0,0,0.75)",
+        // transition: " all .2s ease-in-out",
+        // color: "#454444",
+        // "&:hover": {
+        //   transform: "scale(1.05)",
+    },
+
+
     movieCard:{
-        width:'100%',
+        width:'95%',
         marginTop:'1em',
+        flex:'1 1 24%',
+        
        
     },
     cardFont:{
-        fontSize:'1em',
+        fontSize:'0.7em',
         padding:'0em !important',
         fontFamily: 'Poppins',
     },

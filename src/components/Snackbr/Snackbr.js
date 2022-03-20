@@ -1,30 +1,26 @@
 import Snackbar from '@mui/material/Snackbar';
 import React from 'react';
 
+import useStyles from './styles';
 
 
 
 const Snackbr=({open,close,message})=>{
-    const styles = {
-       
-        snakbar: {
-         
-            
-            display:'flex',
-            justifyContent:'center'
-           
-        }
-    };
+
+    const classes=useStyles();
+ 
     return(
         <>
+         
             <Snackbar
-                style = {styles.snakbar}
+                className={classes.snack}
                 open={open}
                 autoHideDuration={3000}
                 onClose={close}
                 message={message}
                 
             />
+          
         </>
     );
 };

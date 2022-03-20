@@ -1,7 +1,11 @@
 import {makeStyles} from '@material-ui/core/styles';
 
 export default makeStyles(()=>({
-
+    container:{
+        display: 'flex',
+        flexWrap: 'wrap',
+     
+    },
     favHeading:{
         width:'100%',
         textAlign:'center',
