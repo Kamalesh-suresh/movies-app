@@ -11,9 +11,3 @@ export const getMovies=()=>async(dispatch)=>{
     }
 };
 
-// export const addFavorites=(movie)=>{
-//     console.log(movie);
-//     const {data}=movie;
-//     console.log(data);
-//     // dispatch({type:'ADD_FAVORITE',payload:data});
-// };

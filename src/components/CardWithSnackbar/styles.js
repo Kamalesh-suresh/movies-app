@@ -19,6 +19,10 @@ export default makeStyles(()=>({
         width:'95%',
         marginTop:'1em',
         flex:'1 1 24%',
+
+        '@media (max-width: 767px)': {
+            width:'100%',
+        }
         
        
     },
