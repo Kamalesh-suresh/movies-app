@@ -75,6 +75,26 @@ describe('Navbar',()=>{
     
     });
 
+    it('favorite button text', ()=>{
+        render(
+            <MockRouter/>
+        );
+        const buttonElement=screen.getByTestId('favoritesButton');
+       
+        expect(buttonElement).toHaveTextContent('Favorites');
+    
+    });
+
+    it('contact button text', ()=>{
+        render(
+            <MockRouter/>
+        );
+        const buttonElement=screen.getByTestId('contactButton');
+       
+        expect(buttonElement).toHaveTextContent('Contact us');
+    
+    });
+
     
 
     

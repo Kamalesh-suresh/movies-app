@@ -4,6 +4,10 @@ export default makeStyles(()=>({
     container:{
         display: 'flex',
         flexWrap: 'wrap',
+
+        '@media (max-width: 767px)': {
+            display: 'block',
+        }
      
     },
     favHeading:{

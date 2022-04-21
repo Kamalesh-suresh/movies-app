@@ -8,10 +8,20 @@ export default makeStyles(()=>({
     container:{
         display:'flex',
         marginTop:'5em',
+
+        '@media (max-width: 767px)': {
+            flexDirection: 'column',
+        }
     },
     videoContainer:{
         display:'flex',
-        justifyContent:'center'
+        justifyContent:'center',
+
+        '@media (max-width: 767px)': {
+            marginTop: '1em',
+        }
     }
+
+   
    
 }));
